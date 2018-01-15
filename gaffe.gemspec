@@ -6,11 +6,11 @@ require 'gaffe/version'
 Gem::Specification.new do |spec|
   spec.name          = 'gaffe'
   spec.version       = Gaffe::VERSION
-  spec.authors       = ['Rémi Prévost', 'Simon Prévost']
-  spec.email         = ['rprevost@mirego.com', 'sprevost@mirego.com']
+  spec.authors       = ['Rémi Prévost', 'Simon Prévost', 'Theo Morra']
+  spec.email         = ['rprevost@mirego.com', 'sprevost@mirego.com', 'theo@theom.nz']
   spec.description   = 'Gaffe handles Rails error pages in a clean, simple way.'
   spec.summary       = spec.description
-  spec.homepage      = 'https://github.com/mirego/gaffe'
+  spec.homepage      = 'https://github.com/td512/gaffe'
   spec.license       = "BSD 3-Clause"
 
   spec.files         = `git ls-files`.split($/)
