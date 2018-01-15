@@ -9,16 +9,15 @@ module Gaffe
     end
 
     def show
-      render "errors/#{@rescue_response}", status: @status_code
+      render "errors/#{@rescue_response}", status: 200
     rescue ActionView::MissingTemplate
-      render 'errors/internal_server_error', status: 500
+      render 'errors/internal_server_error', status: 200
     end
 
   protected
 
     def fetch_exception
       @exception = request.env['action_dispatch.exception']
-      @status_code = ActionDispatch::ExceptionWrapper.new(request.env, @exception).status_code
       @rescue_response = ActionDispatch::ExceptionWrapper.rescue_responses[@exception.class.name]
     end
 
